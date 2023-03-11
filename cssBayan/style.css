@@ -1,70 +1,76 @@
-
+.container{
+    background:#FED290;
+    width:100%;
+    height:100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items:center
+}
 .block-container{
-    background:olive;
-    max-width:50%;
-    height:70%;
+    background:#F9804B;
+    width:50vw;
+    height:50vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border:#E47209  solid;
 }
 .block-item{
     color:#fff;
-    margin-bottom: 5%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    margin-bottom: 2rem;
 }
-.block-title{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
+
 .radio-btn{
     appearance:none;
     width:0;
     height:0;
 }
-.title{
-    display: block;
-}
-/* .meme-img{
-    display:none;
-} */
 .icon{
     background:url(./assets/icons/down.svg) no-repeat;
-    width: 4vw;
-    height: 4vh;
+    width: 2rem;
+    height: 2rem;
 }
-.radio-btn:checked+.meme-img{
+.meme-img{
+    display:none;
+} 
+.radio-btn:checked +.meme-img{
     display:block;
 }
- .radio-btn:checked +.icon {
+/* .radio-btn:checked +.icon {
     background:url(./assets/icons/up.svg) no-repeat;
-} 
+}  */
 
 .img-1{
     background: url("./assets/why.gif") no-repeat;
-    background-size: cover;
+    background-size: contain;
     width:20rem;
-    height:15rem;
+    height:10rem;
+    align-self: center;
 }
 .img-2{
     background: url("./assets/false.gif") no-repeat;
-    background-size: cover;
+    background-size: contain;
     width:20rem;
     height:10rem;
+    align-self: center;
 }
 .img-3{
-    background:  no-repeat url(./assets/numone.gif);
-    background-size: cover;
+    background:  no-repeat url("./assets/numone.gif");
+    background-size: contain;
     width:20rem;
-    height:15rem;
-
+    height:10rem;
+    align-self: center;
 }
 .img-4{
-    background:no-repeat url(./assets/twss.gif);
-    background-size: cover;
+    background:no-repeat url("./assets/twss.gif");
+    background-size: contain;
     width:20rem;
-    height:15rem;
+    height:10rem;
+    align-self: center;
 }
