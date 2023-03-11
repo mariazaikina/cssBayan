@@ -1,16 +1,24 @@
+
 .block-container{
-    background-color: black;
-    width:50%;
-    height:50vh;
+    background:olive;
+    max-width:50%;
+    height:70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .block-item{
-    display:block;
     color:#fff;
-    width:20%;
-    
+    margin-bottom: 5%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.block-title{
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 .radio-btn{
     appearance:none;
@@ -20,22 +28,43 @@
 .title{
     display: block;
 }
-.meme-img{
+/* .meme-img{
     display:none;
+} */
+.icon{
+    background:url(./assets/icons/down.svg) no-repeat;
+    width: 4vw;
+    height: 4vh;
 }
 .radio-btn:checked+.meme-img{
     display:block;
 }
+ .radio-btn:checked +.icon {
+    background:url(./assets/icons/up.svg) no-repeat;
+} 
+
 .img-1{
-    background: no-repeat url(./assets/why.gif) contain;
-    object-fit: cover;
+    background: url("./assets/why.gif") no-repeat;
+    background-size: cover;
+    width:20rem;
+    height:15rem;
 }
 .img-2{
-    background: no-repeat url(./assets/false.gif);
+    background: url("./assets/false.gif") no-repeat;
+    background-size: cover;
+    width:20rem;
+    height:10rem;
 }
 .img-3{
     background:  no-repeat url(./assets/numone.gif);
+    background-size: cover;
+    width:20rem;
+    height:15rem;
+
 }
 .img-4{
-    background:no-repeat url(./assets/twss.gif)
+    background:no-repeat url(./assets/twss.gif);
+    background-size: cover;
+    width:20rem;
+    height:15rem;
 }
