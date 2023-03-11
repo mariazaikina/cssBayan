@@ -27,7 +27,6 @@
 }
 .block-item {
   width: 100%;
-  margin: 0 auto;
   padding: 0;
   color: #fff;
   display: flex;
@@ -55,7 +54,7 @@
 }
 .meme-img {
   display: none;
-  width: 23em;
+  width: 100%;
   height: 15em;
 }
 .radio-btn:checked ~ .meme-img {
