@@ -1,61 +1,69 @@
+@media(min-width:100px){
 .container {
   background: #fed290;
   width: 100%;
   height: 100vh;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Inika;
+  font-size: 1rem;
 }
 .block-container {
   background: #f9804b;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-  padding: 2em;
+  width: 98%;
+  margin: 0;
+  padding: 1em auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border: #e47209 solid;
 }
-.bayan-title{
-    color:#fff;
+.bayan-title {
+  color: #fff;
+  margin-bottom: 3em;
 }
 .block-item {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  width: 80%;
+  overflow: hidden;
 }
-.title {
-  display: block;
+.item-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0;
+}
+.radio-btn {
+  appearance: none;
+}
+.radio-btn:hover {
+  cursor: pointer;
 }
 .icon {
+  display:block;
   background: url(./assets/icons/down.svg) no-repeat;
   width: 2rem;
   height: 2rem;
 }
-.radio-btn {
-  appearance: none;
-  padding:10%;
-}
 .meme-img {
   display: none;
-  width: 22rem;
-  height: 15rem;
-  background-size:100%;
+  width: 23em;
+  height: 15em;
 }
 .radio-btn:checked ~ .meme-img {
   display: flex;
-
 }
-.radio-btn:checked + .icon {
+.radio-btn:checked ~ .icon {
   background: url(./assets/icons/up.svg) no-repeat;
 }
-
 .img-1 {
   background: url("./assets/why.gif") no-repeat;
 }
@@ -64,8 +72,14 @@
 }
 .img-3 {
   background: no-repeat url("./assets/numone.gif");
-  height:19rem;
+  height: 18em;
 }
 .img-4 {
   background: no-repeat url("./assets/twss.gif");
+
 }
+}
+@media(min-width:500px){
+
+}
+    
