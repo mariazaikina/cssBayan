@@ -1,6 +1,3 @@
-html{
-  scroll-behavior: smooth;
-}
 @media (min-width: 0px) {
   .container {
     background: #fed290;
@@ -12,6 +9,7 @@ html{
     align-items: center;
     font-family: Inika;
     font-size: 1rem;
+    font-weight: 500;
     user-select: none;
   }
   .block-container {
@@ -25,10 +23,9 @@ html{
     align-items: center;
     border: #e47209 solid;
     overflow: hidden;
-    transition: all 0.3s ease;
-    }
+  }
   .bayan-title {
-    color: #fff;
+    color: yellowgreen;
     font-size: 1.5rem;
     margin: 0.5em auto;
   }
@@ -62,12 +59,15 @@ html{
     transform: translate(-50%);
   }
   .meme-img {
-    display: none;
+    opacity: 0;
     width: 100%;
+    height: 0;
     transition: all 0.3s ease;
   }
   .radio-btn:checked ~ .meme-img {
-    display: flex;
+    opacity: 1;
+    width: 100%;
+    height: 11rem;
     transition: all 0.3s ease;
   }
   .radio-btn:checked ~ .icon {
@@ -89,12 +89,17 @@ html{
   .bayan-title {
     font-size: 2rem;
   }
+  .item-label {
+    width: 90%;
+  }
   .block-item {
     width: 98%;
     padding: 0 1em;
   }
-  .meme-img {
-    width: 90%;
+  .radio-btn:checked ~ .meme-img {
+    width: 100%;
+    height: 11rem;
+    transition: all 0.3s ease;
   }
 }
 @media (min-width: 1200px) {
@@ -105,15 +110,21 @@ html{
     font-size: 2.5rem;
   }
   .block-container {
-    width: 40%;
+    height: fit-content;
     padding: 1em 1em;
   }
   .block-container:hover {
     cursor: pointer;
   }
   .block-container:hover .title-text {
-    color: #000;
+    color: yellowgreen;
     transition: all 0.3s ease;
+  }
+  .radio-btn:checked ~ .meme-img {
+    width: 100%;
+    height: 25rem;
+    transition: all 0.3s ease;
+    opacity: 1;
   }
   .icon {
     display: none;
@@ -128,17 +139,20 @@ html{
   .item-label:hover {
     cursor: pointer;
   }
-  .item-label:hover img{
-    display: block;
-  }
-  .item-label:hover .icon{
+  .item-label:hover .icon {
     background: url(./assets/icons/up.svg) no-repeat;
     transition: all 0.3s ease;
   }
-  .meme-img {
-    width: 80%;
+  .item-label:hover .meme-img{
+    width:100%;
+    height:25rem;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+  .item-label:active .meme-img{
+    opacity: 0.5;
   }
   .block-item:active > * {
     opacity: 0.5;
-}
+  }
 }
