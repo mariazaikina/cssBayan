@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 @media (min-width: 0px) {
   .container {
     background: #fed290;
@@ -9,11 +12,12 @@
     align-items: center;
     font-family: Inika;
     font-size: 1rem;
+    user-select: none;
   }
   .block-container {
     background: #f9804b;
     width: 95%;
-    height: max-content;
+    height: fit-content;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -21,7 +25,8 @@
     align-items: center;
     border: #e47209 solid;
     overflow: hidden;
-  }
+    transition: all 0.3s ease;
+    }
   .bayan-title {
     color: #fff;
     font-size: 1.5rem;
@@ -59,18 +64,21 @@
   .meme-img {
     display: none;
     width: 100%;
+    transition: all 0.3s ease;
   }
   .radio-btn:checked ~ .meme-img {
     display: flex;
+    transition: all 0.3s ease;
   }
   .radio-btn:checked ~ .icon {
     background: url(./assets/icons/up.svg) no-repeat;
+    transition: all 0.3s ease;
   }
 }
-@media (min-width:568px) {
-  .block-container{
-    width:50%;
-    height:max-content;
+@media (min-width: 568px) {
+  .block-container {
+    width: 50%;
+    height: max-content;
     margin: 0 0;
   }
 }
@@ -78,38 +86,59 @@
   .container {
     font-size: 1.5rem;
   }
-  .bayan-title{
-   font-size: 2rem;
+  .bayan-title {
+    font-size: 2rem;
   }
-  .block-container{
-    width:50%;
-    height:max-content;
-    margin: 0 0;
+  .block-item {
+    width: 98%;
+    padding: 0 1em;
   }
-  .block-item{
-    width:98%;
-    padding:0 1em;
-  }
-  .meme-img{
-    width:90%;
+  .meme-img {
+    width: 90%;
   }
 }
 @media (min-width: 1200px) {
   .container {
     font-size: 2rem;
   }
-  .bayan-title{
+  .bayan-title {
     font-size: 2.5rem;
-   }
-  .block-container{
-    width:50%;
-    height:80%;
-    margin: 0 0;
   }
-  .item-label{
-    width:70%;
+  .block-container {
+    width: 40%;
+    padding: 1em 1em;
   }
-   .meme-img{
-    width: 100%;
-   }
+  .block-container:hover {
+    cursor: pointer;
+  }
+  .block-container:hover .title-text {
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  .icon {
+    display: none;
+  }
+  .block-container:hover .icon {
+    display: block;
+  }
+  .item-label {
+    width: 80%;
+    padding: 0.5em 0.5em;
+  }
+  .item-label:hover {
+    cursor: pointer;
+  }
+  .item-label:hover img{
+    display: block;
+  }
+  .item-label:hover .icon{
+    background: url(./assets/icons/up.svg) no-repeat;
+    transition: all 0.3s ease;
+  }
+  .meme-img {
+    width: 80%;
+  }
+  .block-item:active > * {
+    opacity: 0.5;
+}
 }
