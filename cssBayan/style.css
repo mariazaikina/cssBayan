@@ -1,84 +1,115 @@
-@media(min-width:100px){
-.container {
-  background: #fed290;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Inika;
-  font-size: 1rem;
+@media (min-width: 0px) {
+  .container {
+    background: #fed290;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: Inika;
+    font-size: 1rem;
+  }
+  .block-container {
+    background: #f9804b;
+    width: 95%;
+    height: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #e47209 solid;
+    overflow: hidden;
+  }
+  .bayan-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0.5em auto;
+  }
+  .block-item {
+    width: 100%;
+    padding: 0 1em;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .item-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 1em 0;
+  }
+  .radio-btn {
+    appearance: none;
+  }
+  .radio-btn:hover {
+    cursor: pointer;
+  }
+  .icon {
+    display: block;
+    background: url(./assets/icons/down.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    transform: translate(-50%);
+  }
+  .meme-img {
+    display: none;
+    width: 100%;
+  }
+  .radio-btn:checked ~ .meme-img {
+    display: flex;
+  }
+  .radio-btn:checked ~ .icon {
+    background: url(./assets/icons/up.svg) no-repeat;
+  }
 }
-.block-container {
-  background: #f9804b;
-  width: 98%;
-  margin: 0;
-  padding: 1em auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: #e47209 solid;
+@media (min-width:568px) {
+  .block-container{
+    width:50%;
+    height:max-content;
+    margin: 0 0;
+  }
 }
-.bayan-title {
-  color: #fff;
-  margin-bottom: 3em;
+@media (min-width: 800px) {
+  .container {
+    font-size: 1.5rem;
+  }
+  .bayan-title{
+   font-size: 2rem;
+  }
+  .block-container{
+    width:50%;
+    height:max-content;
+    margin: 0 0;
+  }
+  .block-item{
+    width:98%;
+    padding:0 1em;
+  }
+  .meme-img{
+    width:90%;
+  }
 }
-.block-item {
-  width: 100%;
-  padding: 0;
-  color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  overflow: hidden;
+@media (min-width: 1200px) {
+  .container {
+    font-size: 2rem;
+  }
+  .bayan-title{
+    font-size: 2.5rem;
+   }
+  .block-container{
+    width:50%;
+    height:80%;
+    margin: 0 0;
+  }
+  .item-label{
+    width:70%;
+  }
+   .meme-img{
+    width: 100%;
+   }
 }
-.item-label {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 1em 0;
-}
-.radio-btn {
-  appearance: none;
-}
-.radio-btn:hover {
-  cursor: pointer;
-}
-.icon {
-  display:block;
-  background: url(./assets/icons/down.svg) no-repeat;
-  width: 2rem;
-  height: 2rem;
-}
-.meme-img {
-  display: none;
-  width: 100%;
-  height: 15em;
-}
-.radio-btn:checked ~ .meme-img {
-  display: flex;
-}
-.radio-btn:checked ~ .icon {
-  background: url(./assets/icons/up.svg) no-repeat;
-}
-.img-1 {
-  background: url("./assets/why.gif") no-repeat;
-}
-.img-2 {
-  background: url("./assets/false.gif") no-repeat;
-}
-.img-3 {
-  background: no-repeat url("./assets/numone.gif");
-  height: 18em;
-}
-.img-4 {
-  background: no-repeat url("./assets/twss.gif");
-
-}
-}
-@media(min-width:500px){
-
-}
-    
